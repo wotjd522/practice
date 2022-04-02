@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang = "ko">
+<head>
+    <meta charset = "utf-8">
+    <title> 메인페이지 </title>
+
+</head>
+<body>
+    <form action = "/save">
+        <p>이름 : <input name = "name" , type = "text" /></p>
+        <p>나이 : <input name = "age" , type = "text" /></p>
+        <input type ="submit">
+    </form>
+
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+        </tr>
+        <tr th:each="member:${members}">
+            <td th:text="${member.name}"></td>
+            <td th:text="${member.age}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
